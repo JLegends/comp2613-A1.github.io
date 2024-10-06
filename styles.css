@@ -1,0 +1,228 @@
+:root {
+    --color-nav: #51279B;
+    --color-nav-hover: #8662C7;
+    
+    --color-text-light: #F5F7FA;
+    --color-text-dark: #3E4C59;
+
+    --color-back: #e9eef6;
+    --color-card: #FFFFFF;
+
+}
+
+html { box-sizing: border-box; }
+*, *:before, *:after {
+box-sizing: inherit;
+}  
+
+body, ul, .homepage-container, h4, h5, p, hr, a, figure  {
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 48px;
+    color: var(--color-text-light);
+    font-weight: 1000;
+}
+
+h2 {
+    font-size: 24px;
+    color: var(--color-text-light);
+    font-weight: 100;
+}
+
+.homepage-container {
+    width: 100%;
+    height: 30rem;
+    background-size: cover;
+    background-image: url("images/florence.jpg");
+}
+
+nav {
+    display: flex;
+}
+
+.navigation-menu {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: var(--color-nav);
+    margin-right: 50%;
+    padding: 25px 25px 0 25px;
+}
+
+.navigation-menu li {
+    margin-left: 25px;
+}
+
+.navigation-menu a:hover {
+    color: var(--color-nav-hover);
+}
+
+.info {
+    padding: 4rem 0 0 7rem;
+}
+
+.info h2 {
+    margin-bottom: 0.5rem;
+}
+
+.info button {
+    background-color: var(--color-nav);
+    border: 0px;
+    padding: 1rem;
+    color: var(--color-text-light);
+
+}
+
+.info button:hover {
+    background-color: var(--color-nav-hover);
+}
+
+#card-container {
+    display: flex;
+    background-color: var(--color-back);
+    padding: 20px;
+}
+
+.cards {
+    width: 100%;
+    margin: 2px;
+}
+
+.cards > li {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--color-card);
+}
+
+.cards img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+}
+
+.content {
+    padding: 0.3rem 0 0 0.5rem;
+}
+
+.card-buttons {
+    display: flex;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+p {
+    font-size: 12px;
+    padding: 0.5rem 0 0 0;
+}
+
+h5 {
+    font-size: 10px;
+}
+
+.likes, .comments {
+    display: flex;
+    padding: 0.5rem 0 0.5rem 1rem;
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position-y: 0.5rem;
+}
+
+.likes {
+    background-image: url("images/heart.png");
+    padding-right: 1rem;
+}
+
+.comments {
+    background-image: url("images/comment.png");
+
+}
+
+hr {
+    border: 1px solid var(--color-text-dark);
+}
+
+footer {
+    height: 6rem;
+    width: 100%;
+    padding-top: 2rem;
+    background-color: var(--color-back);
+    text-align: center;
+}
+
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-menu a {
+    color: var(--color-text-dark);
+}
+
+.footer-menu a:hover {
+    color: var(--color-text-light);
+}
+
+footer h4 {
+    padding-top: 1.5rem;
+    color: var(--color-text-dark)
+}
+
+
+@media only screen and (max-width: 900px) {
+    .navigation-menu {
+        padding: 25px 25px 0 15px;
+    }
+
+    .nav-item {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 10px;
+    }
+}
+
+
+@media only screen and (max-width: 750px) {
+    .navigation-menu {
+        padding: 25px 25px 0 5px;
+    }
+
+    .nav-item {
+        font-size: 10px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    #card-container {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-back);
+        padding: 20px;
+    }
+    
+    .cards {
+        width: 100%;
+        margin: 2px;
+    }
+    
+    .cards > li {
+        width: 100%;
+        background-color: var(--color-card);
+    }
+    
+    .cards img {
+        width: 100%;
+        height: auto;
+    }
+}
