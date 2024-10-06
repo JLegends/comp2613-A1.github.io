@@ -2,8 +2,8 @@
     --color-nav: #51279B;
     --color-nav-hover: #8662C7;
 
-    --color-text-light: #F5F7FA;
-    --color-text-dark: #3E4C59;
+    --color-text-light: white;
+    --color-text-dark: black;
 
     --color-back: #e9eef6;
 }
@@ -53,13 +53,13 @@ nav {
 .navigation-menu {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    color: var(--color-nav);
     margin-right: 50%;
     padding: 25px 25px 0 25px;
 }
 
-.navigation-menu li {
+.navigation-menu .nav-item {
     margin-left: 25px;
+    color: var(--color-nav);
 }
 
 .navigation-menu a:hover {
